@@ -1,16 +1,27 @@
-# live_mentor_app
+# Real-Time Mentorship Tracking & Analytics
+**Full-Stack Implementation | Flutter • Node.js • PostgreSQL**
 
-A new Flutter project.
+## 🚀 Overview
+A live-streaming location system designed for campus mentorship discovery. This project enables mentors to broadcast their real-time location to students and persists session data into a relational database for administrative analytics.
 
-## Getting Started
+## 🛠️ Tech Stack
+* **Frontend**: Flutter (Cross-platform)
+* **Backend**: Node.js & Express.js
+* **Real-time Engine**: Socket.io (WebSockets)
+* **Database**: PostgreSQL via Supabase
+* **Mapping**: OpenStreetMap & Flutter Map
 
-This project is a starting point for a Flutter application.
+## 🌟 Key Features
+* **Live Coordinate Streaming**: Implemented low-latency bi-directional communication using WebSockets to track mentor movement with sub-second updates.
+* **Stateless API Design**: Developed a RESTful architecture in Node.js to handle session logging, ensuring the system can scale horizontally.
+* **Relational Analytics**: Utilized SQL Views in PostgreSQL to aggregate weekly session data, including total mentoring minutes and session counts.
+* **Session Persistence**: Implemented JSONB storage for complex path-data history, allowing for historical path visualization.
 
-A few resources to get you started if this is your first Flutter project:
+## 📊 Database Schema
+The project utilizes a Relational PostgreSQL schema:
+- `mentor_sessions`: Stores `mentor_id`, `duration`, and `path_data` (JSONB).
+- `weekly_mentor_stats`: A SQL View for real-time reporting of mentor activity.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+**Developer**: Sneha A (PES1UG23CS582)  
+**Location**: Bengaluru, India
